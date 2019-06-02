@@ -1,0 +1,22 @@
+server:
+    port: 8085
+
+logging:
+    level:
+        org:
+            springframework: ERROR
+
+spring:
+    jpa:
+        properties:
+            hibernate:
+                temp:
+                    use_jdbc_metadata_defaults: false
+        #database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+        generate-ddl: true
+        hibernate:
+            ddl-auto: create-drop
+    datasource:
+        url: jdbc:postgresql://localhost:5432/postgres
+        username: postgres
+        password: root
